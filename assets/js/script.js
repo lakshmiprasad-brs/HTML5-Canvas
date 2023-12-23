@@ -72,3 +72,26 @@ num == 10;
 function addNum(a = 10, b = 20) {
   return a + b;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+      const canvas = document.getElementById("drawingBoard");
+      const context = canvas.getContext("2d");
+
+      // Your existing drawing code...
+
+      // Function to clear the drawing board
+      function clearDrawingBoard() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+      }
+
+      // Add click event listener to the button
+      const clearButton = document.getElementById("clearButton");
+      clearButton.addEventListener("click", clearDrawingBoard);
+    });
+    
+    const clearBtn = document.getElementById('canvasBtn');
+function clearCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+// Event listener for the "Clear Canvas" button
+clearBtn.addEventListener('click', clearCanvas);
